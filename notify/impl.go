@@ -546,13 +546,6 @@ type slackAttachment struct {
 	MrkdwnIn []string `json:"mrkdwn_in,omitempty"`
 }
 
-// slackAttachmentField is displayed in a table inside the message attachment.
-type slackAttachmentField struct {
-	Title string `json:"title"`
-	Value string `json:"value"`
-	Short bool   `json:"short,omitempty"`
-}
-
 // Notify implements the Notifier interface.
 func (n *Slack) Notify(ctx context.Context, as ...*types.Alert) (bool, error) {
 	var err error
